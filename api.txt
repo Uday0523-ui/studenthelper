@@ -1,0 +1,4 @@
+const SUPABASE_URL = "https://konwlftkdzglsimndvtf.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtvbndsZnRrZHpnbHNpbW5kdnRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU0NzEwMzksImV4cCI6MjA3MTA0NzAzOX0.dsTrU88Wqsuf3lyD0skomekYu-9EaT4OpMewZQKVj2I";
+
+            

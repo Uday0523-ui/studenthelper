@@ -7,12 +7,13 @@
     <link rel="icon" type="image/svg+xml" href="St logo.jpg">
     <meta name="description"
         content="Unlock your potential with expert career guidance. India's first offline ed-tech platform helping students make informed academic decisions.">
-    <title>STUDENT HELPER - Career Guidance</title>
+    <title>STUDENT HELPER - Synthwave Career Guidance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="St logo.jpg" />
     <link rel="icon" type="image/png" sizes="16x16" href="St logo.jpg" />
     <link rel="apple-touch-icon" sizes="180x180" href="St logo.jpg" />
+    <!-- Optional manifest for PWA / android -->
     <link rel="manifest" href="St logo.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +24,10 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #F0F0F0; /* Off-white background */
-            color: #374151; /* Dark Gray text */
-        }
-
-        /* This hides the body until the JavaScript is ready, preventing the footer from showing early */
-        body.uninitialized {
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
+            background-color: #1a112c;
+            /* Deep Purple */
+            color: #fce7f3;
+            /* Light Pink */
         }
 
         .page-section {
@@ -42,19 +39,26 @@
         }
 
         .text-gradient {
-            /* Changed from gradient to solid color to match the new palette */
-            color: #96A78D;
-        }
-        
-        /* Removed glow effect for a cleaner look */
-        .button-primary {
-             background-color: #96A78D;
-             color: white;
-             transition: background-color 0.3s ease;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #f97316, #d946ef);
+            /* Orange to Fuchsia */
         }
 
-        .button-primary:hover {
-            background-color: #819475; /* Darker shade of the main green */
+        .glassmorphism {
+            background: rgba(26, 17, 44, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-on-hover {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(217, 70, 239, 0.7), 0 0 8px rgba(249, 115, 22, 0.6);
         }
 
         .font-brand {
@@ -77,7 +81,14 @@
             animation: fadeIn 0.8s ease-in-out forwards;
         }
 
-        /* Custom radio button styles for the new theme */
+        .hero-bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(217, 70, 239, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(217, 70, 239, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Custom radio button styles */
         .custom-radio input[type="radio"] {
             display: none;
         }
@@ -87,57 +98,58 @@
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
             transition: background-color 0.3s, color 0.3s;
-            border: 1px solid #B6CEB4; /* Lighter green border */
-            color: #374151;
+            border: 1px solid #a21caf;
+            /* Fuchsia */
         }
 
         .custom-radio input[type="radio"]:checked+label {
-            background-color: #96A78D; /* Main green for selected */
-            border-color: #96A78D;
+            background-color: #d946ef;
+            /* Fuchsia */
             color: white;
             font-weight: bold;
         }
     </style>
 </head>
 
-<body class="bg-[#F0F0F0] uninitialized">
-    <header class="header sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+<body class="bg-slate-900">
+    <!-- HEADER -->
+    <header class="header sticky top-0 z-50 glassmorphism">
         <nav class="nav max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
             <div class="logo">
                 <a href="#home" class="flex items-center space-x-3">
                     <img src="St logo.jpg" alt="Student Helper Logo" width="40" height="40"
-                        class="rounded-full border-2 border-[#96A78D]">
-                    <span class="logo-text font-brand font-bold text-xl text-gray-800">STUDENT HELPER</span>
+                        class="rounded-full border-2 border-fuchsia-500">
+                    <span class="logo-text font-brand font-bold text-xl text-white">STUDENT HELPER</span>
                 </a>
             </div>
             <div class="hidden md:flex items-center space-x-1" id="nav-links">
                 <a href="#home"
-                    class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
                 <a href="#about"
-                    class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
                 <a href="#services"
-                    class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
                 <a href="#mentors"
-                    class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Mentors</a>
+                    class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mentors</a>
                 <a href="#test"
-                    class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Test</a>
+                    class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Test</a>
                 <a href="#contact"
-                    class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 <div class="relative inline-block ml-2" id="user-dropdown-container">
                     <a href="#login" id="auth-link"
-                        class="button-primary text-white px-5 py-2.5 rounded-lg text-sm font-semibold">Get
+                        class="bg-fuchsia-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold glow-on-hover">Get
                         Started</a>
                     <div id="dropdown-menu"
-                        class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-100">
+                        class="hidden absolute right-0 mt-2 w-48 glassmorphism rounded-md shadow-lg py-1 z-10">
                         <a href="#dashboard"
-                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-[#F0F0F0]">Dashboard</a>
+                            class="block px-4 py-2 text-sm text-pink-200 hover:bg-purple-900/50">Dashboard</a>
                         <button id="logout-btn"
-                            class="block w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-[#F0F0F0]">Logout</button>
+                            class="block w-full text-left px-4 py-2 text-sm text-pink-200 hover:bg-purple-900/50">Logout</button>
                     </div>
                 </div>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900">
+                <button id="mobile-menu-btn" class="text-pink-200 hover:text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -145,54 +157,56 @@
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div id="mobile-menu" class="hidden md:hidden glassmorphism px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="#home"
-                class="mobile-nav-link block text-gray-600 hover:bg-[#D9E9CF] px-3 py-2 rounded-md text-base font-medium">Home</a>
+                class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Home</a>
             <a href="#about"
-                class="mobile-nav-link block text-gray-600 hover:bg-[#D9E9CF] px-3 py-2 rounded-md text-base font-medium">About
+                class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">About
                 Us</a>
             <a href="#services"
-                class="mobile-nav-link block text-gray-600 hover:bg-[#D9E9CF] px-3 py-2 rounded-md text-base font-medium">Our
+                class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Our
                 Services</a>
             <a href="#mentors"
-                class="mobile-nav-link block text-gray-600 hover:bg-[#D9E9CF] px-3 py-2 rounded-md text-base font-medium">Our
+                class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Our
                 Mentors</a>
             <a href="#test"
-                class="mobile-nav-link block text-gray-600 hover:bg-[#D9E9CF] px-3 py-2 rounded-md text-base font-medium">Test</a>
+                class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Test</a>
             <a href="#contact"
-                class="mobile-nav-link block text-gray-600 hover:bg-[#D9E9CF] px-3 py-2 rounded-md text-base font-medium">Contact
+                class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Contact
                 Us</a>
-            <div class="border-t border-gray-200 my-2"></div>
+            <div class="border-t border-purple-800/50 my-2"></div>
             <a href="#login" id="mobile-auth-link"
-                class="mobile-nav-link block bg-[#96A78D] text-white px-3 py-2 rounded-md text-base font-medium text-center">Login</a>
+                class="mobile-nav-link block bg-fuchsia-600 text-white px-3 py-2 rounded-md text-base font-medium text-center">Login</a>
             <a href="#dashboard" id="mobile-dashboard-link"
-                class="hidden mobile-nav-link block text-gray-600 hover:bg-[#D9E9CF] px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
+                class="hidden mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
             <button id="mobile-logout-btn"
-                class="hidden w-full text-left block text-red-500 hover:bg-red-100 px-3 py-2 rounded-md text-base font-medium">Logout</button>
+                class="hidden w-full text-left block text-red-400 hover:bg-red-900/50 px-3 py-2 rounded-md text-base font-medium">Logout</button>
         </div>
     </header>
 
     <main>
-        <section id="page-home" class="page-section active">
+        <!-- HOME PAGE -->
+        <section id="page-home" class="page-section">
             <section id="home" class="hero relative overflow-hidden">
+                <div class="absolute inset-0 hero-bg-grid"></div>
                 <div class="container mx-auto px-6 py-20 md:py-32 text-center relative z-10 fade-in-section">
                     <div class="hero-content max-w-4xl mx-auto">
                         <div
-                            class="hero-badge inline-block bg-[#D9E9CF]/50 text-[#96A78D] text-sm font-semibold mb-4 px-4 py-1.5 rounded-full">
+                            class="hero-badge inline-block glassmorphism text-pink-200 text-sm font-semibold mb-4 px-4 py-1.5 rounded-full">
                             India's #1 Career Discovery Platform</div>
-                        <h1 class="hero-title font-brand text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+                        <h1 class="hero-title font-brand text-4xl md:text-6xl font-bold text-white leading-tight">
                             Design Your <span class="text-gradient">Future Career</span> With Us.
                         </h1>
-                        <p class="hero-subtitle mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                        <p class="hero-subtitle mt-6 text-lg text-pink-300 max-w-2xl mx-auto">
                             We merge cutting-edge psychometric analysis with elite mentorship to architect your ideal
                             academic and professional future.
                         </p>
                         <div class="mt-8 flex justify-center gap-4">
                             <a href="#services"
-                                class="button-primary text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105">Explore
+                                class="bg-fuchsia-600 text-white font-semibold py-3 px-8 rounded-lg glow-on-hover transition-all transform hover:scale-105">Explore
                                 Services</a>
                             <a href="#test"
-                                class="bg-white text-gray-700 font-semibold py-3 px-8 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all">Check
+                                class="glassmorphism text-pink-200 font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-all">Check
                                 Your Ability</a>
                         </div>
                     </div>
@@ -205,12 +219,12 @@
                         <div>
                             <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                                 alt="About Student Helper"
-                                class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-500">
+                                class="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
                         </div>
-                        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
-                            <span class="text-[#96A78D] font-semibold">WHO WE ARE</span>
-                            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Pioneering Student Success</h2>
-                            <p class="mt-4 text-gray-600"><strong>STUDENT HELPER</strong> was engineered to decode the
+                        <div class="glassmorphism p-8 md:p-12 rounded-2xl">
+                            <span class="text-pink-400 font-semibold">WHO WE ARE</span>
+                            <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Pioneering Student Success</h2>
+                            <p class="mt-4 text-pink-300"><strong>STUDENT HELPER</strong> was engineered to decode the
                                 complexities of academic and career planning. As India's premier offline ed-tech
                                 innovator, we deliver a high-precision framework for stream selection and career
                                 strategy, ensuring every move is backed by data and human expertise.</p>
@@ -219,102 +233,103 @@
                 </div>
             </section>
 
-            <section id="services" class="py-20 md:py-28 bg-[#D9E9CF]/30">
+            <section id="services" class="py-20 md:py-28">
                 <div class="container mx-auto px-6 fade-in-section">
                     <div class="text-center max-w-3xl mx-auto">
-                        <span class="text-[#96A78D] font-semibold">OUR SERVICES</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Guidance Packages for Every Ambition
+                        <span class="text-pink-400 font-semibold">OUR SERVICES</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Guidance Packages for Every Ambition
                         </h2>
-                        <p class="mt-4 text-gray-600">From foundational diagnostics to comprehensive mentorship, we
+                        <p class="mt-4 text-pink-300">From foundational diagnostics to comprehensive mentorship, we
                             offer a spectrum of services engineered for clarity and strategic advantage.</p>
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                        <div class="service-card bg-white p-8 rounded-2xl flex flex-col shadow-lg">
-                            <h3 class="font-bold text-xl mb-3 text-gray-800">Psychometric Assessment + Report</h3>
-                            <p class="text-gray-600 mb-6 flex-grow">Scientific analysis of your interests, aptitude, and
+                        <!-- Service Cards -->
+                        <div class="service-card glassmorphism p-8 rounded-2xl flex flex-col">
+                            <h3 class="font-bold text-xl mb-3 text-white">Psychometric Assessment + Report</h3>
+                            <p class="text-pink-300 mb-6 flex-grow">Scientific analysis of your interests, aptitude, and
                                 personality with a comprehensive report.</p>
-                            <div class="font-brand font-bold text-3xl text-[#96A78D] mb-6">₹449</div>
+                            <div class="font-brand font-bold text-3xl text-pink-400 mb-6">₹449</div>
                             <div class="flex items-center gap-4 mt-auto">
                                 <a href="#contact"
-                                    class="flex-1 text-center button-primary text-white font-semibold py-2.5 px-4 rounded-lg">Buy
+                                    class="flex-1 text-center bg-fuchsia-600 text-white font-semibold py-2.5 px-4 rounded-lg glow-on-hover">Buy
                                     Now</a>
                                 <a href="#services"
-                                    class="flex-1 text-center bg-gray-100 text-gray-700 font-semibold py-2.5 px-4 rounded-lg hover:bg-gray-200">Read
+                                    class="flex-1 text-center glassmorphism text-pink-200 font-semibold py-2.5 px-4 rounded-lg hover:bg-white/10">Read
                                     More</a>
                             </div>
                         </div>
                         <div
-                            class="service-card bg-white p-8 rounded-2xl flex flex-col border-2 border-[#96A78D] relative shadow-2xl">
+                            class="service-card glassmorphism p-8 rounded-2xl flex flex-col border-2 border-fuchsia-500 relative">
                             <div
-                                class="absolute top-0 right-0 bg-[#96A78D] text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
+                                class="absolute top-0 right-0 bg-fuchsia-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
                                 POPULAR</div>
-                            <h3 class="font-bold text-xl mb-3 text-gray-800">Assessment + Report + Career Guide</h3>
-                            <p class="text-gray-600 mb-6 flex-grow">Our top package, featuring a detailed guide to
+                            <h3 class="font-bold text-xl mb-3 text-white">Assessment + Report + Career Guide</h3>
+                            <p class="text-pink-300 mb-6 flex-grow">Our top package, featuring a detailed guide to
                                 architect your academic and professional trajectory.</p>
-                            <div class="font-brand font-bold text-3xl text-[#96A78D] mb-6">₹699</div>
+                            <div class="font-brand font-bold text-3xl text-pink-400 mb-6">₹699</div>
                             <div class="flex items-center gap-4 mt-auto">
                                 <a href="#contact"
-                                    class="flex-1 text-center button-primary text-white font-semibold py-2.5 px-4 rounded-lg">Buy
+                                    class="flex-1 text-center bg-fuchsia-600 text-white font-semibold py-2.5 px-4 rounded-lg glow-on-hover">Buy
                                     Now</a>
                                 <a href="#services"
-                                    class="flex-1 text-center bg-gray-100 text-gray-700 font-semibold py-2.5 px-4 rounded-lg hover:bg-gray-200">Read
+                                    class="flex-1 text-center glassmorphism text-pink-200 font-semibold py-2.5 px-4 rounded-lg hover:bg-white/10">Read
                                     More</a>
                             </div>
                         </div>
-                        <div class="service-card bg-white p-8 rounded-2xl flex flex-col shadow-lg">
-                            <h3 class="font-bold text-xl mb-3 text-gray-800">Assessment + Guide + WhatsApp Support</h3>
-                            <p class="text-gray-600 mb-6 flex-grow">The popular package plus ongoing WhatsApp support
+                        <div class="service-card glassmorphism p-8 rounded-2xl flex flex-col">
+                            <h3 class="font-bold text-xl mb-3 text-white">Assessment + Guide + WhatsApp Support</h3>
+                            <p class="text-pink-300 mb-6 flex-grow">The popular package plus ongoing WhatsApp support
                                 for continuous, real-time guidance.</p>
-                            <div class="font-brand font-bold text-3xl text-[#96A78D] mb-6">₹799</div>
+                            <div class="font-brand font-bold text-3xl text-pink-400 mb-6">₹799</div>
                             <div class="flex items-center gap-4 mt-auto">
                                 <a href="#contact"
-                                    class="flex-1 text-center button-primary text-white font-semibold py-2.5 px-4 rounded-lg">Buy
+                                    class="flex-1 text-center bg-fuchsia-600 text-white font-semibold py-2.5 px-4 rounded-lg glow-on-hover">Buy
                                     Now</a>
                                 <a href="#services"
-                                    class="flex-1 text-center bg-gray-100 text-gray-700 font-semibold py-2.5 px-4 rounded-lg hover:bg-gray-200">Read
+                                    class="flex-1 text-center glassmorphism text-pink-200 font-semibold py-2.5 px-4 rounded-lg hover:bg-white/10">Read
                                     More</a>
                             </div>
                         </div>
-                        <div class="service-card bg-white p-8 rounded-2xl flex flex-col shadow-lg">
-                            <h3 class="font-bold text-xl mb-3 text-gray-800">Mentorship from Tier 1 Colleges + Guide</h3>
-                            <p class="text-gray-600 mb-6 flex-grow">Direct mentorship from students at IITs, AIIMS,
+                        <div class="service-card glassmorphism p-8 rounded-2xl flex flex-col">
+                            <h3 class="font-bold text-xl mb-3 text-white">Mentorship from Tier 1 Colleges + Guide</h3>
+                            <p class="text-pink-300 mb-6 flex-grow">Direct mentorship from students at IITs, AIIMS,
                                 IIMs, and more, plus a full career guide.</p>
-                            <div class="font-brand font-bold text-3xl text-[#96A78D] mb-6">₹1299</div>
+                            <div class="font-brand font-bold text-3xl text-pink-400 mb-6">₹1299</div>
                             <div class="flex items-center gap-4 mt-auto">
                                 <a href="#contact"
-                                    class="flex-1 text-center button-primary text-white font-semibold py-2.5 px-4 rounded-lg">Buy
+                                    class="flex-1 text-center bg-fuchsia-600 text-white font-semibold py-2.5 px-4 rounded-lg glow-on-hover">Buy
                                     Now</a>
                                 <a href="#services"
-                                    class="flex-1 text-center bg-gray-100 text-gray-700 font-semibold py-2.5 px-4 rounded-lg hover:bg-gray-200">Read
+                                    class="flex-1 text-center glassmorphism text-pink-200 font-semibold py-2.5 px-4 rounded-lg hover:bg-white/10">Read
                                     More</a>
                             </div>
                         </div>
-                        <div class="service-card bg-white p-8 rounded-2xl flex flex-col shadow-lg">
-                            <h3 class="font-bold text-xl mb-3 text-gray-800">Counseling with Certified Counselors + Guide
+                        <div class="service-card glassmorphism p-8 rounded-2xl flex flex-col">
+                            <h3 class="font-bold text-xl mb-3 text-white">Counseling with Certified Counselors + Guide
                             </h3>
-                            <p class="text-gray-600 mb-6 flex-grow">Intensive counseling sessions with top certified
+                            <p class="text-pink-300 mb-6 flex-grow">Intensive counseling sessions with top certified
                                 counselors to forge a detailed roadmap for your future.</p>
-                            <div class="font-brand font-bold text-3xl text-[#96A78D] mb-6">₹1499</div>
+                            <div class="font-brand font-bold text-3xl text-pink-400 mb-6">₹1499</div>
                             <div class="flex items-center gap-4 mt-auto">
                                 <a href="#contact"
-                                    class="flex-1 text-center button-primary text-white font-semibold py-2.5 px-4 rounded-lg">Buy
+                                    class="flex-1 text-center bg-fuchsia-600 text-white font-semibold py-2.5 px-4 rounded-lg glow-on-hover">Buy
                                     Now</a>
                                 <a href="#services"
-                                    class="flex-1 text-center bg-gray-100 text-gray-700 font-semibold py-2.5 px-4 rounded-lg hover:bg-gray-200">Read
+                                    class="flex-1 text-center glassmorphism text-pink-200 font-semibold py-2.5 px-4 rounded-lg hover:bg-white/10">Read
                                     More</a>
                             </div>
                         </div>
-                        <div class="service-card bg-white p-8 rounded-2xl flex flex-col shadow-lg">
-                            <h3 class="font-bold text-xl mb-3 text-gray-800">Counseling + Mentorship + Career Guide</h3>
-                            <p class="text-gray-600 mb-6 flex-grow">The ultimate package: professional counseling, elite
+                        <div class="service-card glassmorphism p-8 rounded-2xl flex flex-col">
+                            <h3 class="font-bold text-xl mb-3 text-white">Counseling + Mentorship + Career Guide</h3>
+                            <p class="text-pink-300 mb-6 flex-grow">The ultimate package: professional counseling, elite
                                 mentorship, and a detailed guide for total support.</p>
-                            <div class="font-brand font-bold text-3xl text-[#96A78D] mb-6">₹2499</div>
+                            <div class="font-brand font-bold text-3xl text-pink-400 mb-6">₹2499</div>
                             <div class="flex items-center gap-4 mt-auto">
                                 <a href="#contact"
-                                    class="flex-1 text-center button-primary text-white font-semibold py-2.5 px-4 rounded-lg">Buy
+                                    class="flex-1 text-center bg-fuchsia-600 text-white font-semibold py-2.5 px-4 rounded-lg glow-on-hover">Buy
                                     Now</a>
                                 <a href="#services"
-                                    class="flex-1 text-center bg-gray-100 text-gray-700 font-semibold py-2.5 px-4 rounded-lg hover:bg-gray-200">Read
+                                    class="flex-1 text-center glassmorphism text-pink-200 font-semibold py-2.5 px-4 rounded-lg hover:bg-white/10">Read
                                     More</a>
                             </div>
                         </div>
@@ -325,38 +340,39 @@
             <section id="mentors" class="py-20 md:py-28">
                 <div class="container mx-auto px-6 fade-in-section">
                     <div class="text-center max-w-3xl mx-auto">
-                        <span class="text-[#96A78D] font-semibold">OUR MENTORS</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Guidance from Industry Leaders</h2>
-                        <p class="mt-4 text-gray-600">
+                        <span class="text-pink-400 font-semibold">OUR MENTORS</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Guidance from Industry Leaders</h2>
+                        <p class="mt-4 text-pink-300">
                             Learn from distinguished professionals who bring decades of experience in education,
                             counseling, and public administration to guide your academic journey.
                         </p>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-16">
+                        <!-- Mentor Cards -->
                         <div
-                            class="mentor-card bg-white p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 shadow-lg">
+                            class="mentor-card glassmorphism p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6">
                             <div class="flex-shrink-0">
-                                <img src="https://placehold.co/100x100/96A78D/ffffff?text=PA" class="rounded-full"
+                                <img src="https://placehold.co/100x100/d946ef/ffffff?text=PA" class="rounded-full"
                                     alt="Dr. Poonam Aggarwal">
                             </div>
                             <div class="text-center sm:text-left">
-                                <h3 class="font-bold text-2xl text-gray-800">Dr. Poonam Aggarwal</h3>
-                                <p class="text-[#96A78D] font-medium mt-1">Educational Psychology Expert</p>
-                                <p class="text-gray-600 mt-3 text-sm">With extensive experience in educational
+                                <h3 class="font-bold text-2xl text-white">Dr. Poonam Aggarwal</h3>
+                                <p class="text-pink-400 font-medium mt-1">Educational Psychology Expert</p>
+                                <p class="text-pink-300 mt-3 text-sm">With extensive experience in educational
                                     psychology and career counseling, Dr. Aggarwal brings scientific rigor and deep
                                     understanding of student development to our guidance programs.</p>
                             </div>
                         </div>
                         <div
-                            class="mentor-card bg-white p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 shadow-lg">
+                            class="mentor-card glassmorphism p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6">
                             <div class="flex-shrink-0">
-                                <img src="https://placehold.co/100x100/96A78D/ffffff?text=RP" class="rounded-full"
+                                <img src="https://placehold.co/100x100/d946ef/ffffff?text=RP" class="rounded-full"
                                     alt="Richie Pandey">
                             </div>
                             <div class="text-center sm:text-left">
-                                <h3 class="font-bold text-2xl text-gray-800">Richie Pandey</h3>
-                                <p class="text-[#96A78D] font-medium mt-1">IAS Officer, Bihar Cadre</p>
-                                <p class="text-gray-600 mt-3 text-sm">A distinguished civil servant with deep insights
+                                <h3 class="font-bold text-2xl text-white">Richie Pandey</h3>
+                                <p class="text-pink-400 font-medium mt-1">IAS Officer, Bihar Cadre</p>
+                                <p class="text-pink-300 mt-3 text-sm">A distinguished civil servant with deep insights
                                     into public administration and governance. Brings practical knowledge of career
                                     paths in civil services.</p>
                             </div>
@@ -364,45 +380,45 @@
                     </div>
                     <div id="stats" class="mt-20">
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                            <div class="text-center bg-white/70 p-6 rounded-lg shadow-md">
-                                <p class="stat-number font-brand text-4xl font-bold text-[#96A78D]" data-target="2500">0</p>
-                                <p class="text-gray-600 mt-1">Students Trust Us</p>
+                            <div class="text-center glassmorphism p-6 rounded-lg">
+                                <p class="stat-number font-brand text-4xl font-bold text-white" data-target="2500">0</p>
+                                <p class="text-pink-300 mt-1">Students Trust Us</p>
                             </div>
-                            <div class="text-center bg-white/70 p-6 rounded-lg shadow-md">
-                                <p class="stat-number font-brand text-4xl font-bold text-[#96A78D]" data-target="50">0</p>
-                                <p class="text-gray-600 mt-1">Schools Partnered</p>
+                            <div class="text-center glassmorphism p-6 rounded-lg">
+                                <p class="stat-number font-brand text-4xl font-bold text-white" data-target="50">0</p>
+                                <p class="text-pink-300 mt-1">Schools Partnered</p>
                             </div>
-                            <div class="text-center bg-white/70 p-6 rounded-lg shadow-md">
-                                <p class="stat-number font-brand text-4xl font-bold text-[#96A78D]" data-target="20">0</p>
-                                <p class="text-gray-600 mt-1">Psychologists</p>
+                            <div class="text-center glassmorphism p-6 rounded-lg">
+                                <p class="stat-number font-brand text-4xl font-bold text-white" data-target="20">0</p>
+                                <p class="text-pink-300 mt-1">Psychologists</p>
                             </div>
-                            <div class="text-center bg-white/70 p-6 rounded-lg shadow-md">
-                                <p class="stat-number font-brand text-4xl font-bold text-[#96A78D]" data-target="50">0</p>
-                                <p class="text-gray-600 mt-1">Educationists</p>
+                            <div class="text-center glassmorphism p-6 rounded-lg">
+                                <p class="stat-number font-brand text-4xl font-bold text-white" data-target="50">0</p>
+                                <p class="text-pink-300 mt-1">Educationists</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="contact" class="py-20 md:py-28 bg-[#D9E9CF]/30">
+            <section id="contact" class="py-20 md:py-28">
                 <div class="container mx-auto px-6 fade-in-section">
                     <div class="text-center max-w-3xl mx-auto">
-                        <span class="text-[#96A78D] font-semibold">GET IN TOUCH</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Ready to Start Your Journey?</h2>
-                        <p class="mt-4 text-gray-600">Fill out the form below, and one of our expert counselors will get
+                        <span class="text-pink-400 font-semibold">GET IN TOUCH</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Ready to Start Your Journey?</h2>
+                        <p class="mt-4 text-pink-300">Fill out the form below, and one of our expert counselors will get
                             back to you shortly.</p>
                     </div>
-                    <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl mt-12 shadow-xl">
+                    <div class="max-w-xl mx-auto glassmorphism p-8 rounded-2xl mt-12">
                         <form id="contactForm" class="space-y-5">
                             <input type="text" id="contact_name" name="name" placeholder="Full Name *" required
-                                class="w-full p-4 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#96A78D] text-gray-800 placeholder-gray-500">
+                                class="w-full p-4 bg-purple-900/50 border border-purple-700 rounded-lg focus:ring-2 focus:ring-fuchsia-500 text-white placeholder-pink-300">
                             <input type="email" id="contact_email" name="email" placeholder="Email Address *" required
-                                class="w-full p-4 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#96A78D] text-gray-800 placeholder-gray-500">
+                                class="w-full p-4 bg-purple-900/50 border border-purple-700 rounded-lg focus:ring-2 focus:ring-fuchsia-500 text-white placeholder-pink-300">
                             <textarea id="contact_message" name="message" rows="4" placeholder="Your Message *" required
-                                class="w-full p-4 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#96A78D] text-gray-800 placeholder-gray-500"></textarea>
+                                class="w-full p-4 bg-purple-900/50 border border-purple-700 rounded-lg focus:ring-2 focus:ring-fuchsia-500 text-white placeholder-pink-300"></textarea>
                             <button type="submit"
-                                class="w-full button-primary text-white font-bold py-4 px-4 rounded-lg">Send
+                                class="w-full bg-fuchsia-600 text-white font-bold py-4 px-4 rounded-lg glow-on-hover transition-colors">Send
                                 Message</button>
                         </form>
                     </div>
@@ -410,9 +426,390 @@
             </section>
         </section>
 
-        </main>
+        <!-- LOGIN/REGISTER PAGE -->
+        <section id="page-login" class="page-section">
+            <div class="min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
+                    <h2 class="font-brand text-2xl font-bold text-center text-white mb-6" id="auth-title">Welcome Back
+                    </h2>
+                    <form id="login-form-container" class="space-y-4">
+                        <input type="email" id="login-email" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300"
+                            placeholder="Email address">
+                        <input type="password" id="login-password" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300"
+                            placeholder="Password">
+                        <div class="text-right">
+                            <a href="#password-reset" class="text-sm text-pink-400 hover:underline">Forgot Password?</a>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-fuchsia-600 text-white font-bold py-3 rounded-lg glow-on-hover">Sign
+                            In</button>
+                        <p id="login-message" class="text-center text-sm"></p>
+                    </form>
+                    <form id="register-form-container" class="space-y-4 hidden">
+                        <input type="text" id="register-name" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="Full Name">
+                        <input type="tel" id="register-phone" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="Phone Number">
+                        <input type="email" id="register-email" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="Email address">
+                        <input type="password" id="register-password" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="Password">
+                        <select id="register-class" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white appearance-none focus:ring-2 focus:ring-fuchsia-500"
+                            style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%2...'); background-position: right 1rem center; background-repeat: no-repeat; background-size: .65em auto;">
+                            <option value="" disabled selected class="bg-purple-900">Select your class</option>
+                            <option value="class-9" class="bg-purple-900">Class 9</option>
+                            <option value="class-10" class="bg-purple-900">Class 10</option>
+                            <option value="class-11" class="bg-purple-900">Class 11</option>
+                            <option value="class-12" class="bg-purple-900">Class 12</option>
+                            <option value="college" class="bg-purple-900">College Student</option>
+                            <option value="parent" class="bg-purple-900">Parent</option>
+                            <option value="other" class="bg-purple-900">Other</option>
+                        </select>
+                        <button type="submit"
+                            class="w-full bg-fuchsia-600 text-white font-bold py-3 rounded-lg glow-on-hover">Create
+                            Account</button>
+                        <p id="register-message" class="text-center text-sm"></p>
+                    </form>
+                    <div class="my-6 flex items-center">
+                        <div class="flex-grow bg-purple-800/50 h-px"></div>
+                        <span class="mx-4 text-sm text-pink-300">Or</span>
+                        <div class="flex-grow bg-purple-800/50 h-px"></div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        <button id="google-login-btn" type="button"
+                            class="w-full flex items-center justify-center py-3 px-4 glassmorphism rounded-lg hover:bg-white/10 transition">
+                            <svg class="w-5 h-5 mr-3" viewBox="0 0 48 48">
+                                <path fill="#FFC107"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
+                                <path fill="#FF3D00"
+                                    d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                </path>
+                                <path fill="#4CAF50"
+                                    d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.222,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                </path>
+                                <path fill="#1976D2"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.574l6.19,5.238C41.38,36.402,44,30.631,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
+                            </svg>
+                            <span class="text-sm font-semibold text-pink-200">Continue with Google</span>
+                        </button>
+                    </div>
+                    <p class="text-sm text-center mt-6 text-pink-300">
+                        <span id="auth-prompt">Don't have an account?</span>
+                        <button id="auth-toggle" class="font-semibold text-pink-400 hover:underline">Register
+                            now</button>
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <footer id="footer" class="footer text-gray-500 border-t border-gray-200">
+        <!-- DASHBOARD PAGE -->
+        <section id="page-dashboard" class="page-section min-h-screen py-12">
+            <div class="max-w-6xl mx-auto py-12 px-4 grid md:grid-cols-3 gap-8">
+                <!-- Profile Section -->
+                <section class="glassmorphism rounded-2xl p-6 md:col-span-2">
+                    <h2 class="font-brand text-2xl font-bold text-white mb-6">👤 My Profile</h2>
+                    <form id="profileForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Form fields -->
+                        <div>
+                            <label class="block text-sm font-medium text-pink-300">Full Name</label>
+                            <input id="db-fullName" type="text" readonly
+                                class="mt-1 w-full rounded-lg p-3 bg-purple-900/50 border border-purple-700 text-white" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-pink-300">Email</label>
+                            <input id="db-email" type="email" readonly
+                                class="mt-1 w-full rounded-lg p-3 bg-purple-900/50 border border-purple-700 text-white" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-pink-300">Phone Number</label>
+                            <input id="db-phone" type="text" disabled
+                                class="mt-1 w-full rounded-lg p-3 bg-purple-900/50 border border-purple-700 text-white disabled:opacity-50" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-pink-300">Class</label>
+                            <select id="db-class" disabled
+                                class="mt-1 w-full rounded-lg p-3 bg-purple-900/50 border border-purple-700 text-white disabled:opacity-50 appearance-none">
+                                <option>Select Class</option>
+                                <option>Class 6</option>
+                                <option>Class 7</option>
+                                <option>Class 8</option>
+                                <option>Class 9</option>
+                                <option>Class 10</option>
+                                <option>Class 11</option>
+                                <option>Class 12</option>
+                                <option>College</option>
+                                <option>Parent</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </form>
+                    <!-- Actions -->
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <button id="editProfileBtn"
+                            class="px-4 py-2 bg-fuchsia-600 text-white rounded-lg glow-on-hover transition">Edit
+                            Profile</button>
+                        <a href="#change-email"
+                            class="px-4 py-2 bg-fuchsia-600 text-white rounded-lg glow-on-hover transition">Update
+                            Email</a>
+                        <a href="#password-reset"
+                            class="px-4 py-2 bg-fuchsia-600 text-white rounded-lg glow-on-hover transition">Update
+                            Password</a>
+                    </div>
+                </section>
+                <!-- Purchase History -->
+                <section class="glassmorphism rounded-2xl p-6">
+                    <h2 class="font-brand text-2xl font-bold text-white mb-4">🛒 Purchase History</h2>
+                    <ul id="purchaseList" class="space-y-3 max-h-72 overflow-y-auto pr-2">
+                        <li class="text-pink-300 text-sm">Loading purchases...</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <!-- CHANGE EMAIL PAGE -->
+        <section id="page-change-email" class="page-section">
+            <div class="min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
+                    <h2 class="font-brand text-2xl font-bold text-center text-white mb-6">Change Your Email</h2>
+                    <form id="email-form" class="space-y-4">
+                        <input type="email" id="new-email" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="New Email Address">
+                        <button type="submit"
+                            class="w-full bg-fuchsia-600 text-white font-bold py-3 rounded-lg glow-on-hover">Update
+                            Email</button>
+                        <p id="email-message" class="text-center text-sm"></p>
+                    </form>
+                    <a href="#dashboard" class="block text-center mt-4 text-sm text-pink-400 hover:underline">Back to
+                        Dashboard</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASSWORD RESET PAGE -->
+        <section id="page-password-reset" class="page-section">
+            <div class="min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
+                    <h2 class="font-brand text-2xl font-bold text-center text-white mb-6">Reset Password</h2>
+                    <p class="text-center text-pink-300 mb-6">Enter your email to receive a password reset link.</p>
+                    <form id="reset-form" class="space-y-4">
+                        <input type="email" id="reset-email" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="Your Email Address">
+                        <button type="submit"
+                            class="w-full bg-fuchsia-600 text-white font-bold py-3 rounded-lg glow-on-hover">Send Reset
+                            Link</button>
+                        <p id="reset-message" class="text-center text-sm"></p>
+                    </form>
+                    <a href="#login" class="block text-center mt-4 text-sm text-pink-400 hover:underline">Back to
+                        Login</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPDATE PASSWORD PAGE -->
+        <section id="page-update-password" class="page-section">
+            <div class="min-h-screen flex items-center justify-center p-4">
+                <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
+                    <h2 class="font-brand text-2xl font-bold text-center text-white mb-6">Set New Password</h2>
+                    <p class="text-center text-pink-300 mb-6">Create and confirm your new password below.</p>
+                    <form id="update-password-form" class="space-y-4">
+                        <input type="password" id="new-password" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="New Password">
+                        <input type="password" id="confirm-password" required
+                            class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white"
+                            placeholder="Confirm New Password">
+                        <button type="submit"
+                            class="w-full bg-fuchsia-600 text-white font-bold py-3 rounded-lg glow-on-hover">Update
+                            Password</button>
+                        <p id="update-password-message" class="text-center text-sm"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREER CLARITY TEST PAGE -->
+        <section id="page-test" class="page-section min-h-screen py-12">
+            <div class="container mx-auto px-6 py-12">
+                <div class="max-w-3xl mx-auto glassmorphism p-8 rounded-2xl">
+                    <h2 class="font-brand text-3xl font-bold text-center text-white mb-2">Career Clarity Test</h2>
+                    <p class="text-center text-pink-300 mb-8">Answer these 10 questions to get a snapshot of your career
+                        readiness.</p>
+
+                    <form id="career-test-form" class="space-y-8">
+                        <!-- Personal Details -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Name"
+                                class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300">
+
+                            <select id="register-class" required
+                                class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white appearance-none focus:ring-2 focus:ring-fuchsia-500"
+                                style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%2...'); background-position: right 1rem center; background-repeat: no-repeat; background-size: .65em auto;">
+                                <option value="" disabled selected class="bg-purple-900">Select your class</option>
+                                <option value="class-9" class="bg-purple-900">Class 9</option>
+                                <option value="class-10" class="bg-purple-900">Class 10</option>
+                                <option value="class-11" class="bg-purple-900">Class 11</option>
+                                <option value="class-12" class="bg-purple-900">Class 12</option>
+                                <option value="college" class="bg-purple-900">College Student</option>
+                                <option value="parent" class="bg-purple-900">Parent</option>
+                                <option value="other" class="bg-purple-900">Other</option>
+                            </select>
+                            <input type="text" placeholder="School Name"
+                                class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300">
+                            <input type="tel" placeholder="Phone Number"
+                                class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300">
+                            <input type="tel" placeholder="WhatsApp Number"
+                                class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300">
+                            <input type="text" placeholder="Your Dream Career (if any)"
+                                class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300">
+                        </div>
+
+                        <!-- Questions -->
+                        <div class="space-y-6">
+                            <!-- Question 1 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">1. Have you decided which stream you’ll take
+                                    after 10th/12th?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q1-2" name="q1" value="2"><label for="q1-2">Yes</label>
+                                    <input type="radio" id="q1-1" name="q1" value="1"><label for="q1-1">I have 2-3
+                                        options</label>
+                                    <input type="radio" id="q1-0" name="q1" value="0"><label for="q1-0">Not yet</label>
+                                </div>
+                            </div>
+                            <!-- Question 2 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">2. Do you know which career you want to pursue
+                                    after your studies?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q2-2" name="q2" value="2"><label for="q2-2">Yes, very
+                                        clear</label>
+                                    <input type="radio" id="q2-1" name="q2" value="1"><label for="q2-1">Rough
+                                        idea</label>
+                                    <input type="radio" id="q2-0" name="q2" value="0"><label for="q2-0">No idea</label>
+                                </div>
+                            </div>
+                            <!-- Question 3 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">3. Do you know the entrance exams needed for
+                                    your chosen career?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q3-2" name="q3" value="2"><label for="q3-2">Yes</label>
+                                    <input type="radio" id="q3-1" name="q3" value="1"><label for="q3-1">Heard of them,
+                                        not sure</label>
+                                    <input type="radio" id="q3-0" name="q3" value="0"><label for="q3-0">No</label>
+                                </div>
+                            </div>
+                            <!-- Question 4 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">4. Are you aware of at least 5 careers apart
+                                    from doctor, engineer, IAS?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q4-2" name="q4" value="2"><label for="q4-2">Yes</label>
+                                    <input type="radio" id="q4-1" name="q4" value="1"><label for="q4-1">I know
+                                        2-3</label>
+                                    <input type="radio" id="q4-0" name="q4" value="0"><label for="q4-0">No</label>
+                                </div>
+                            </div>
+                            <!-- Question 5 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">5. Do you know what skills are needed for your
+                                    dream career?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q5-2" name="q5" value="2"><label for="q5-2">Yes</label>
+                                    <input type="radio" id="q5-1" name="q5" value="1"><label for="q5-1">A little
+                                        bit</label>
+                                    <input type="radio" id="q5-0" name="q5" value="0"><label for="q5-0">No</label>
+                                </div>
+                            </div>
+                            <!-- Question 6 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">6. Have you spoken to anyone
+                                    (senior/student/professional) in your chosen field?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q6-2" name="q6" value="2"><label for="q6-2">Yes</label>
+                                    <input type="radio" id="q6-1" name="q6" value="1"><label for="q6-1">Planning
+                                        to</label>
+                                    <input type="radio" id="q6-0" name="q6" value="0"><label for="q6-0">No</label>
+                                </div>
+                            </div>
+                            <!-- Question 7 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">7. Do you have a plan for the next 2 years
+                                    (subjects, exams, etc.)?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q7-2" name="q7" value="2"><label for="q7-2">Detailed
+                                        plan</label>
+                                    <input type="radio" id="q7-1" name="q7" value="1"><label for="q7-1">Rough
+                                        idea</label>
+                                    <input type="radio" id="q7-0" name="q7" value="0"><label for="q7-0">No plan</label>
+                                </div>
+                            </div>
+                            <!-- Question 8 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">8. Do you know your top 3 strengths?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q8-2" name="q8" value="2"><label for="q8-2">Yes</label>
+                                    <input type="radio" id="q8-1" name="q8" value="1"><label for="q8-1">Maybe
+                                        1-2</label>
+                                    <input type="radio" id="q8-0" name="q8" value="0"><label for="q8-0">No</label>
+                                </div>
+                            </div>
+                            <!-- Question 9 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">9. Why are you choosing your preferred career?
+                                </p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q9-2" name="q9" value="2"><label
+                                        for="q9-2">Interest/passion</label>
+                                    <input type="radio" id="q9-1" name="q9" value="1"><label
+                                        for="q9-1">Parents/friends</label>
+                                    <input type="radio" id="q9-0" name="q9" value="0"><label for="q9-0">No
+                                        reason</label>
+                                </div>
+                            </div>
+                            <!-- Question 10 -->
+                            <div>
+                                <p class="font-semibold text-white mb-3">10. How confident are you about your career
+                                    choice?</p>
+                                <div class="flex flex-wrap gap-4 custom-radio">
+                                    <input type="radio" id="q10-2" name="q10" value="2"><label for="q10-2">Very
+                                        confident</label>
+                                    <input type="radio" id="q10-1" name="q10" value="1"><label
+                                        for="q10-1">Somewhat</label>
+                                    <input type="radio" id="q10-0" name="q10" value="0"><label for="q10-0">Not
+                                        confident</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center pt-4">
+                            <button type="submit"
+                                class="w-full md:w-auto bg-fuchsia-600 text-white font-bold py-3 px-8 rounded-lg glow-on-hover transition-colors">Submit
+                                Test</button>
+                        </div>
+                    </form>
+                    <div id="test-results" class="mt-8 text-center hidden">
+                        <h3 class="font-brand text-2xl font-bold text-white">Your Result</h3>
+                        <p class="font-brand text-5xl font-bold text-gradient mt-2" id="test-score-display">0 / 20</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer text-pink-400 border-t border-purple-800/50">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 STUDENT HELPER. Architecting the Future of Careers.</p>
         </div>
@@ -481,8 +878,8 @@
             if (session) {
                 authLink.textContent = session.user.user_metadata?.full_name || 'Account';
                 authLink.href = 'javascript:void(0);';
-                authLink.classList.remove('button-primary', 'text-white');
-                authLink.classList.add('text-gray-600');
+                authLink.classList.remove('bg-fuchsia-600');
+                authLink.classList.add('glassmorphism', 'text-pink-200');
 
                 document.getElementById('user-dropdown-container').onmouseenter = () => dropdownMenu.classList.remove('hidden');
                 document.getElementById('user-dropdown-container').onmouseleave = () => dropdownMenu.classList.add('hidden');
@@ -493,8 +890,8 @@
             } else {
                 authLink.textContent = 'Get Started';
                 authLink.href = '#login';
-                authLink.classList.add('button-primary', 'text-white');
-                authLink.classList.remove('text-gray-600');
+                authLink.classList.add('bg-fuchsia-600');
+                authLink.classList.remove('glassmorphism', 'text-pink-200');
 
                 dropdownMenu.classList.add('hidden');
                 document.getElementById('user-dropdown-container').onmouseenter = null;
@@ -511,7 +908,9 @@
             if (!session) return;
 
             currentUserId = session.user.id;
-            
+
+            // FIX: Load user data directly from the authenticated user's metadata
+            // This ensures the data entered during signup appears here.
             const userMetadata = session.user.user_metadata;
             if (userMetadata) {
                 dbFullName.value = userMetadata.full_name || "";
@@ -527,17 +926,17 @@
             const { data, error } = await supabase.from("purchases").select("*").eq("user_id", userId).order("created_at", { ascending: false });
             purchaseList.innerHTML = "";
             if (error) {
-                purchaseList.innerHTML = `<li class="text-red-500">Error: ${error.message}</li>`;
+                purchaseList.innerHTML = `<li class="text-red-400">Error: ${error.message}</li>`;
                 return;
             }
             if (!data || data.length === 0) {
-                purchaseList.innerHTML = `<li class="text-gray-500 text-sm">No purchases found.</li>`;
+                purchaseList.innerHTML = `<li class="text-pink-300 text-sm">No purchases found.</li>`;
                 return;
             }
             data.forEach(item => {
                 const li = document.createElement("li");
-                li.className = "flex justify-between text-sm bg-gray-50 p-3 rounded-lg";
-                li.innerHTML = `<span>${item.product_name}</span><span class="text-[#96A78D] font-semibold">₹${item.amount}</span>`;
+                li.className = "flex justify-between text-sm glassmorphism p-3 rounded-lg";
+                li.innerHTML = `<span>${item.product_name}</span><span class="text-pink-400 font-semibold">₹${item.amount}</span>`;
                 purchaseList.appendChild(li);
             });
         }
@@ -606,11 +1005,187 @@
             document.getElementById('mobile-menu-btn').onclick = () => document.getElementById('mobile-menu').classList.toggle('hidden');
             document.querySelectorAll('.mobile-nav-link').forEach(l => l.onclick = () => document.getElementById('mobile-menu').classList.add('hidden'));
 
-            // ... (rest of your event listeners for forms, etc.)
+            const authToggle = document.getElementById('auth-toggle');
+            const authPrompt = document.getElementById('auth-prompt');
+            const loginForm = document.getElementById('login-form-container');
+            const registerForm = document.getElementById('register-form-container');
 
-            // This is the new line that fixes the loading flash.
-            // It runs after all other setup is complete.
-            document.body.classList.remove('uninitialized');
+            authToggle.addEventListener('click', () => {
+                const isLoginVisible = !loginForm.classList.contains('hidden');
+                if (isLoginVisible) {
+                    loginForm.classList.add('hidden');
+                    registerForm.classList.remove('hidden');
+                    authPrompt.textContent = 'Already have an account?';
+                    authToggle.textContent = 'Login here';
+                } else {
+                    loginForm.classList.remove('hidden');
+                    registerForm.classList.add('hidden');
+                    authPrompt.textContent = "Don't have an account?";
+                    authToggle.textContent = 'Register now';
+                }
+            });
+
+            function showMessage(elId, msg, isError) {
+                const el = document.getElementById(elId);
+                el.textContent = msg;
+                el.style.color = isError ? '#f87171' : '#4ade80';
+            }
+
+            loginForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signInWithPassword({
+                    email: e.target[0].value,
+                    password: e.target[1].value
+                });
+                if (error) showMessage('login-message', error.message, true);
+                else window.location.hash = '#dashboard';
+            });
+
+            registerForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.signUp({
+                    email: document.getElementById('register-email').value,
+                    password: document.getElementById('register-password').value,
+                    options: {
+                        data: {
+                            full_name: document.getElementById('register-name').value,
+                            phone: document.getElementById('register-phone').value,
+                            class_status: document.getElementById('register-class').value
+                        }
+                    }
+                });
+                if (error) showMessage('register-message', error.message, true);
+                else showMessage('register-message', 'Success! Check your email for verification.', false);
+            });
+
+            document.getElementById('google-login-btn').addEventListener('click', async () => {
+                const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+                if (error) showMessage('login-message', `Google login failed: ${error.message}`, true);
+            });
+
+            document.getElementById('email-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const { error } = await supabase.auth.updateUser({ email: e.target[0].value });
+                if (error) showMessage('email-message', error.message, true);
+                else showMessage('email-message', 'Check your new email to confirm the change.', false);
+            });
+
+            editProfileBtn.addEventListener("click", async () => {
+                if (!isEditing) {
+                    dbPhone.disabled = false;
+                    dbClass.disabled = false;
+                    editProfileBtn.textContent = "Save Profile";
+                    editProfileBtn.classList.add("bg-green-500");
+                    isEditing = true;
+                } else {
+                    if (!currentUserId) return;
+                    // FIX: Update the user's metadata directly, not a separate 'profiles' table.
+                    const updates = {
+                        phone: dbPhone.value,
+                        class_status: dbClass.value
+                    };
+                    const { data, error } = await supabase.auth.updateUser({ data: updates });
+
+                    if (error) {
+                        alert("Error updating profile: " + error.message);
+                    } else {
+                        // Also update the full name on the nav bar if it was part of the update
+                        if (data.user?.user_metadata?.full_name) {
+                            document.getElementById('auth-link').textContent = data.user.user_metadata.full_name;
+                        }
+                        alert("Profile updated successfully!");
+                        dbPhone.disabled = true;
+                        dbClass.disabled = true;
+                        editProfileBtn.textContent = "Edit Profile";
+                        editProfileBtn.classList.remove("bg-green-500");
+                        isEditing = false;
+                    }
+                }
+            });
+
+            const logout = async () => {
+                await supabase.auth.signOut();
+                window.location.hash = '#home';
+            };
+            document.getElementById('logout-btn').addEventListener('click', logout);
+            document.getElementById('mobile-logout-btn').addEventListener('click', logout);
+
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = document.getElementById("contact_name").value;
+                const email = document.getElementById("contact_email").value;
+                const message = document.getElementById("contact_message").value;
+                const text = `Hello! My name is ${name} (${email}). My message is: ${message}`;
+                const whatsappUrl = `https://wa.me/919334313860?text=${encodeURIComponent(text)}`;
+                window.open(whatsappUrl, "_blank");
+                e.target.reset();
+            });
+
+            const faders = document.querySelectorAll('.fade-in-section');
+            const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -100px 0px" };
+            const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    else {
+                        entry.target.classList.add('appear');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // Password Reset Form
+            const resetForm = document.getElementById('reset-form');
+            resetForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const email = document.getElementById('reset-email').value;
+                const { error } = await supabase.auth.resetPasswordForEmail(email, {
+                    redirectTo: window.location.href.split('#')[0] + '#update-password'
+                });
+                if (error) {
+                    showMessage('reset-message', error.message, true);
+                } else {
+                    showMessage('reset-message', 'Password reset link sent! Check your email.', false);
+                }
+            });
+
+            // Update Password Form
+            const updatePasswordForm = document.getElementById('update-password-form');
+            updatePasswordForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const newPassword = document.getElementById('new-password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+                if (newPassword !== confirmPassword) {
+                    showMessage('update-password-message', 'Passwords do not match!', true);
+                    return;
+                }
+                const { error } = await supabase.auth.updateUser({ password: newPassword });
+                if (error) {
+                    showMessage('update-password-message', error.message, true);
+                } else {
+                    showMessage('update-password-message', 'Password updated successfully! Redirecting...', false);
+                    setTimeout(() => { window.location.hash = '#login' }, 2000);
+                }
+            });
+
+            // Career Test Form
+            const testForm = document.getElementById('career-test-form');
+            testForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let totalScore = 0;
+                const questions = 10;
+                for (let i = 1; i <= questions; i++) {
+                    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (selected) {
+                        totalScore += parseInt(selected.value);
+                    }
+                }
+                document.getElementById('test-score-display').textContent = `${totalScore} / 20`;
+                document.getElementById('test-results').classList.remove('hidden');
+            });
         });
     </script>
 </body>

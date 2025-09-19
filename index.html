@@ -9,11 +9,11 @@
         content="Unlock your potential with expert career guidance. India's first offline ed-tech platform helping students make informed academic decisions.">
     <title>STUDENT HELPER - Synthwave Career Guidance</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="St logo.jpg" />
     <link rel="icon" type="image/png" sizes="16x16" href="St logo.jpg" />
     <link rel="apple-touch-icon" sizes="180x180" href="St logo.jpg" />
-    <!-- Optional manifest for PWA / android -->
     <link rel="manifest" href="St logo.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +112,6 @@
 </head>
 
 <body class="bg-slate-900">
-    <!-- HEADER -->
     <header class="header sticky top-0 z-50 glassmorphism">
         <nav class="nav max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
             <div class="logo">
@@ -131,6 +130,8 @@
                     class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
                 <a href="#mentors"
                     class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mentors</a>
+                <a href="#testimonials"
+                    class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
                 <a href="#test"
                     class="nav-link text-pink-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Test</a>
                 <a href="#contact"
@@ -169,6 +170,8 @@
             <a href="#mentors"
                 class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Our
                 Mentors</a>
+             <a href="#testimonials"
+                class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
             <a href="#test"
                 class="mobile-nav-link block text-pink-200 hover:bg-purple-900/50 px-3 py-2 rounded-md text-base font-medium">Test</a>
             <a href="#contact"
@@ -185,7 +188,6 @@
     </header>
 
     <main>
-        <!-- HOME PAGE -->
         <section id="page-home" class="page-section">
             <section id="home" class="hero relative overflow-hidden">
                 <div class="absolute inset-0 hero-bg-grid"></div>
@@ -243,7 +245,6 @@
                             offer a spectrum of services engineered for clarity and strategic advantage.</p>
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                        <!-- Service Cards -->
                         <div class="service-card glassmorphism p-8 rounded-2xl flex flex-col">
                             <h3 class="font-bold text-xl mb-3 text-white">Psychometric Assessment + Report</h3>
                             <p class="text-pink-300 mb-6 flex-grow">Scientific analysis of your interests, aptitude, and
@@ -348,7 +349,6 @@
                         </p>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-16">
-                        <!-- Mentor Cards -->
                         <div
                             class="mentor-card glassmorphism p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6">
                             <div class="flex-shrink-0">
@@ -401,6 +401,56 @@
                 </div>
             </section>
 
+            <section id="testimonials" class="py-20 md:py-28">
+                <div class="container mx-auto px-6 fade-in-section">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <span class="text-pink-400 font-semibold">TESTIMONIALS</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">What Our Students Say</h2>
+                        <p class="mt-4 text-pink-300">
+                            Real stories from students who found clarity and direction with our guidance.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                        <div class="testimonial-card glassmorphism p-8 rounded-2xl flex flex-col h-full">
+                            <div class="flex-grow mb-6">
+                                <p class="text-pink-200 italic">"Student Helper was a game-changer. The psychometric test was scarily accurate and the counseling session gave me a clear roadmap. I finally know which stream to choose!"</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <img src="https://placehold.co/50x50/f97316/ffffff?text=AS" class="rounded-full mr-4" alt="Anjali Sharma">
+                                <div>
+                                    <p class="font-bold text-white">Anjali S.</p>
+                                    <p class="text-sm text-pink-400">Class 10 Student</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glassmorphism p-8 rounded-2xl flex flex-col h-full">
+                            <div class="flex-grow mb-6">
+                                <p class="text-pink-200 italic">"The mentorship program is incredible. I got to speak with a student from IIT Delhi who cleared up so many of my doubts about engineering. It felt like talking to an older brother."</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <img src="https://placehold.co/50x50/d946ef/ffffff?text=RK" class="rounded-full mr-4" alt="Rohan Kumar">
+                                <div>
+                                    <p class="font-bold text-white">Rohan K.</p>
+                                    <p class="text-sm text-pink-400">Class 12 (Science)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glassmorphism p-8 rounded-2xl flex flex-col h-full">
+                            <div class="flex-grow mb-6">
+                                <p class="text-pink-200 italic">"I was completely lost about careers after B.Com. The career guide I received was detailed and opened my eyes to options I never knew existed. Highly recommended for college students too!"</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <img src="https://placehold.co/50x50/84cc16/ffffff?text=PM" class="rounded-full mr-4" alt="Priya Mehta">
+                                <div>
+                                    <p class="font-bold text-white">Priya M.</p>
+                                    <p class="text-sm text-pink-400">College Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contact" class="py-20 md:py-28">
                 <div class="container mx-auto px-6 fade-in-section">
                     <div class="text-center max-w-3xl mx-auto">
@@ -426,7 +476,6 @@
             </section>
         </section>
 
-        <!-- LOGIN/REGISTER PAGE -->
         <section id="page-login" class="page-section">
             <div class="min-h-screen flex items-center justify-center p-4">
                 <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
@@ -511,14 +560,11 @@
             </div>
         </section>
 
-        <!-- DASHBOARD PAGE -->
         <section id="page-dashboard" class="page-section min-h-screen py-12">
             <div class="max-w-6xl mx-auto py-12 px-4 grid md:grid-cols-3 gap-8">
-                <!-- Profile Section -->
                 <section class="glassmorphism rounded-2xl p-6 md:col-span-2">
                     <h2 class="font-brand text-2xl font-bold text-white mb-6">👤 My Profile</h2>
                     <form id="profileForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Form fields -->
                         <div>
                             <label class="block text-sm font-medium text-pink-300">Full Name</label>
                             <input id="db-fullName" type="text" readonly
@@ -552,7 +598,6 @@
                             </select>
                         </div>
                     </form>
-                    <!-- Actions -->
                     <div class="flex flex-wrap gap-4 mt-8">
                         <button id="editProfileBtn"
                             class="px-4 py-2 bg-fuchsia-600 text-white rounded-lg glow-on-hover transition">Edit
@@ -565,7 +610,6 @@
                             Password</a>
                     </div>
                 </section>
-                <!-- Purchase History -->
                 <section class="glassmorphism rounded-2xl p-6">
                     <h2 class="font-brand text-2xl font-bold text-white mb-4">🛒 Purchase History</h2>
                     <ul id="purchaseList" class="space-y-3 max-h-72 overflow-y-auto pr-2">
@@ -575,7 +619,6 @@
             </div>
         </section>
 
-        <!-- CHANGE EMAIL PAGE -->
         <section id="page-change-email" class="page-section">
             <div class="min-h-screen flex items-center justify-center p-4">
                 <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
@@ -595,7 +638,6 @@
             </div>
         </section>
 
-        <!-- PASSWORD RESET PAGE -->
         <section id="page-password-reset" class="page-section">
             <div class="min-h-screen flex items-center justify-center p-4">
                 <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
@@ -616,7 +658,6 @@
             </div>
         </section>
 
-        <!-- UPDATE PASSWORD PAGE -->
         <section id="page-update-password" class="page-section">
             <div class="min-h-screen flex items-center justify-center p-4">
                 <div class="max-w-md w-full glassmorphism p-8 rounded-2xl">
@@ -638,7 +679,6 @@
             </div>
         </section>
 
-        <!-- CAREER CLARITY TEST PAGE -->
         <section id="page-test" class="page-section min-h-screen py-12">
             <div class="container mx-auto px-6 py-12">
                 <div class="max-w-3xl mx-auto glassmorphism p-8 rounded-2xl">
@@ -647,7 +687,6 @@
                         readiness.</p>
 
                     <form id="career-test-form" class="space-y-8">
-                        <!-- Personal Details -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <input type="text" placeholder="Name"
                                 class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300">
@@ -674,9 +713,7 @@
                                 class="w-full p-3 bg-purple-900/50 border border-purple-700 rounded-lg text-white placeholder-pink-300">
                         </div>
 
-                        <!-- Questions -->
                         <div class="space-y-6">
-                            <!-- Question 1 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">1. Have you decided which stream you’ll take
                                     after 10th/12th?</p>
@@ -687,7 +724,6 @@
                                     <input type="radio" id="q1-0" name="q1" value="0"><label for="q1-0">Not yet</label>
                                 </div>
                             </div>
-                            <!-- Question 2 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">2. Do you know which career you want to pursue
                                     after your studies?</p>
@@ -699,7 +735,6 @@
                                     <input type="radio" id="q2-0" name="q2" value="0"><label for="q2-0">No idea</label>
                                 </div>
                             </div>
-                            <!-- Question 3 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">3. Do you know the entrance exams needed for
                                     your chosen career?</p>
@@ -710,7 +745,6 @@
                                     <input type="radio" id="q3-0" name="q3" value="0"><label for="q3-0">No</label>
                                 </div>
                             </div>
-                            <!-- Question 4 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">4. Are you aware of at least 5 careers apart
                                     from doctor, engineer, IAS?</p>
@@ -721,7 +755,6 @@
                                     <input type="radio" id="q4-0" name="q4" value="0"><label for="q4-0">No</label>
                                 </div>
                             </div>
-                            <!-- Question 5 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">5. Do you know what skills are needed for your
                                     dream career?</p>
@@ -732,7 +765,6 @@
                                     <input type="radio" id="q5-0" name="q5" value="0"><label for="q5-0">No</label>
                                 </div>
                             </div>
-                            <!-- Question 6 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">6. Have you spoken to anyone
                                     (senior/student/professional) in your chosen field?</p>
@@ -743,7 +775,6 @@
                                     <input type="radio" id="q6-0" name="q6" value="0"><label for="q6-0">No</label>
                                 </div>
                             </div>
-                            <!-- Question 7 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">7. Do you have a plan for the next 2 years
                                     (subjects, exams, etc.)?</p>
@@ -755,7 +786,6 @@
                                     <input type="radio" id="q7-0" name="q7" value="0"><label for="q7-0">No plan</label>
                                 </div>
                             </div>
-                            <!-- Question 8 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">8. Do you know your top 3 strengths?</p>
                                 <div class="flex flex-wrap gap-4 custom-radio">
@@ -765,7 +795,6 @@
                                     <input type="radio" id="q8-0" name="q8" value="0"><label for="q8-0">No</label>
                                 </div>
                             </div>
-                            <!-- Question 9 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">9. Why are you choosing your preferred career?
                                 </p>
@@ -778,7 +807,6 @@
                                         reason</label>
                                 </div>
                             </div>
-                            <!-- Question 10 -->
                             <div>
                                 <p class="font-semibold text-white mb-3">10. How confident are you about your career
                                     choice?</p>
@@ -809,12 +837,34 @@
 
     </main>
 
-    <footer id="footer" class="footer text-pink-400 border-t border-purple-800/50">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2025 STUDENT HELPER. Architecting the Future of Careers.</p>
+    <footer id="footer" class="text-pink-400 border-t border-purple-800/50">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="flex flex-col items-center">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://www.linkedin.com/company/student-helper-india/" target="_blank" aria-label="LinkedIn"
+                        class="w-10 h-10 flex items-center justify-center rounded-full text-pink-300 border border-purple-700 hover:bg-fuchsia-600 hover:text-white hover:border-fuchsia-600 transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a href="https://youtube.com/@helperstudent026?si=Hctptd-f98GVM8N8" target="_blank" aria-label="Youtube"
+                        class="w-10 h-10 flex items-center justify-center rounded-full text-pink-300 border border-purple-700 hover:bg-fuchsia-600 hover:text-white hover:border-fuchsia-600 transition-all duration-300">
+                        <i class="fa-brands fa-youtube fa-lg"></i>
+                    </a>
+                    <a href="https://x.com/me_pranavyadav?t=SWmmeNn0R79sYb3Wk6tpsg&s=09" target="_blank" aria-label="Twitter"
+                        class="w-10 h-10 flex items-center justify-center rounded-full text-pink-300 border border-purple-700 hover:bg-fuchsia-600 hover:text-white hover:border-fuchsia-600 transition-all duration-300">
+                        <i class="fa-brands fa-x-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/helperstudent026/" target="_blank" aria-label="Instagram"
+                        class="w-10 h-10 flex items-center justify-center rounded-full text-pink-300 border border-purple-700 hover:bg-fuchsia-600 hover:text-white hover:border-fuchsia-600 transition-all duration-300">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <p>&copy; 2025 STUDENT HELPER. Architecting the Future of Careers.</p>
+                </div>
+            </div>
         </div>
     </footer>
-
     <script type="module">
         import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
@@ -846,7 +896,7 @@
 
         function handleRouting() {
             const hash = window.location.hash.replace('#', '') || 'home';
-            const isHomePageSection = ['home', 'about', 'services', 'mentors', 'contact'].includes(hash);
+            const isHomePageSection = ['home', 'about', 'services', 'mentors', 'testimonials', 'contact'].includes(hash);
 
             Object.values(pages).forEach(p => p.classList.remove('active'));
 
